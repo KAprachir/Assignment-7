@@ -36,7 +36,7 @@ const Navbar = () => {
   );
 
   return (
-    <div className="navbar justify-between lg:justify-around bg-base-100/70 backdrop-blur-md shadow sticky top-0 z-[100] px-4 md:px-10 border-b border-base-200/50 transition-all">
+    <div className="navbar justify-between lg:justify-around bg-base-100/70 backdrop-blur-md shadow sticky top-0 z-100 px-4 md:px-10 border-b border-base-200/50 transition-all">
       <div className="navbar-start">
         <div className="dropdown">
           <div
@@ -61,7 +61,7 @@ const Navbar = () => {
           </div>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content bg-base-100 rounded-2xl z-[1] mt-4 w-56 p-3 shadow-xl border border-base-200"
+            className="menu menu-sm dropdown-content bg-base-100 rounded-2xl z-1 mt-4 w-56 p-3 shadow-xl border border-base-200"
           >
             {links}
           </ul>
