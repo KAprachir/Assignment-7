@@ -3,16 +3,16 @@ import { BiPlus } from "react-icons/bi";
 
 const HeroSection = () => {
   return (
-    <section className="hero min-h-[60vh] bg-base-100 px-4">
+    <section className="hero bg-base-100 py-10">
       <div className="hero-content text-center">
-        <div className="max-w-2xl">
-          <h1 className="text-2xl md:text-4xl font-bold tracking-tight text-base-content">
+        <div className="">
+          <h1 className="text-3xl md:text-5xl font-bold tracking-tight text-base-content">
             Friends to keep close in your life
           </h1>
 
           <p className="py-5 text-lg md:text-xl text-base-content/70 leading-relaxed">
             Your personal shelf of meaningful connections. Browse, tend, and
-            nurture the relationships that matter most.
+            nurture the <br /> relationships that matter most.
           </p>
 
           <div className="flex justify-center">
