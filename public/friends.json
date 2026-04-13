@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "name": "Arif Hossain",
+    "picture": "https://randomuser.me/api/portraits/men/32.jpg",
+    "email": "arif.hossain@gmail.com",
+    "days_since_contact": 18,
+    "status": "overdue",
+    "tags": ["college", "close friend"],
+    "bio": "Met during freshman year at BRUR. We used to pull all-nighters before exams together. Now he's doing his MBA in Dhaka.",
+    "goal": 14,
+    "next_due_date": "2025-07-10"
+  },
+  {
+    "id": 2,
+    "name": "Nusrat Jahan",
+    "picture": "https://randomuser.me/api/portraits/women/44.jpg",
+    "email": "nusrat.jahan@outlook.com",
+    "days_since_contact": 6,
+    "status": "on-track",
+    "tags": ["childhood", "close friend"],
+    "bio": "Grew up in the same neighborhood in Rangpur. She moved to Chittagong for work but we still talk every week.",
+    "goal": 10,
+    "next_due_date": "2025-07-18"
+  },
+  {
+    "id": 3,
+    "name": "Tanvir Ahmed",
+    "picture": "https://randomuser.me/api/portraits/men/17.jpg",
+    "email": "tanvir.dev@proton.me",
+    "days_since_contact": 11,
+    "status": "almost due",
+    "tags": ["tech", "mentor"],
+    "bio": "Senior developer I met at a web dev bootcamp. He helped me understand React deeply and still reviews my code sometimes.",
+    "goal": 12,
+    "next_due_date": "2025-07-14"
+  },
+  {
+    "id": 4,
+    "name": "Lamia Sultana",
+    "picture": "https://randomuser.me/api/portraits/women/68.jpg",
+    "email": "lamia.sultana@yahoo.com",
+    "days_since_contact": 30,
+    "status": "overdue",
+    "tags": ["college", "study group"],
+    "bio": "We were in the same MIS study group for two years. She's now working at a fintech startup in Sylhet.",
+    "goal": 21,
+    "next_due_date": "2025-07-05"
+  },
+  {
+    "id": 5,
+    "name": "Rakibul Islam",
+    "picture": "https://randomuser.me/api/portraits/men/54.jpg",
+    "email": "rakib.islam99@gmail.com",
+    "days_since_contact": 3,
+    "status": "on-track",
+    "tags": ["close friend", "gaming"],
+    "bio": "Best friend since school. We still play PUBG every weekend and roast each other endlessly. Irreplaceable.",
+    "goal": 7,
+    "next_due_date": "2025-07-20"
+  },
+  {
+    "id": 6,
+    "name": "Sadia Rahman",
+    "picture": "https://randomuser.me/api/portraits/women/12.jpg",
+    "email": "sadia.rahman.bd@gmail.com",
+    "days_since_contact": 9,
+    "status": "almost due",
+    "tags": ["college", "project partner"],
+    "bio": "We built our final year project together and almost lost our minds doing it. Great teammate and a genuinely kind person.",
+    "goal": 10,
+    "next_due_date": "2025-07-15"
+  },
+  {
+    "id": 7,
+    "name": "Imtiaz Chowdhury",
+    "picture": "https://randomuser.me/api/portraits/men/76.jpg",
+    "email": "imtiaz.chowdhury@icloud.com",
+    "days_since_contact": 45,
+    "status": "overdue",
+    "tags": ["family friend", "childhood"],
+    "bio": "Our families have known each other for decades. Lost touch after he moved to Canada for his undergrad. Need to reconnect.",
+    "goal": 30,
+    "next_due_date": "2025-06-28"
+  },
+  {
+    "id": 8,
+    "name": "Fariha Akter",
+    "picture": "https://randomuser.me/api/portraits/women/29.jpg",
+    "email": "fariha.akter.bd@gmail.com",
+    "days_since_contact": 5,
+    "status": "on-track",
+    "tags": ["LinkedIn", "professional"],
+    "bio": "Connected on LinkedIn after she commented on my post about learning React. We've had really good conversations about product thinking and tech careers.",
+    "goal": 14,
+    "next_due_date": "2025-07-22"
+  }
+]
