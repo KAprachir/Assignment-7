@@ -1,4 +1,4 @@
-import Friends from "@/componants/Friends/page";
+import Friends from "@/app/friends/page";
 import HeroSection from "@/componants/Hero/page";
 import Image from "next/image";
 
