@@ -1,39 +1,43 @@
+"use client";
 import Link from "next/link";
 import logo from "@/assets/logo.png";
 import Image from "next/image";
 import { FaHome } from "react-icons/fa";
 import { RiTimeLine } from "react-icons/ri";
 import { TfiStatsUp } from "react-icons/tfi";
+import { usePathname } from "next/navigation";
 
 const Navbar = () => {
-  const links = (
-    <>
-      <li>
-        <Link
-          href={"/"}
-          className="hover:text-primary transition-all duration-300 active:scale-95"
-        >
-          <FaHome className="text-lg" /> Home
-        </Link>
-      </li>
-      <li>
-        <Link
-          href={"/timeline"}
-          className="hover:text-primary transition-all duration-300 active:scale-95"
-        >
-          <RiTimeLine className="text-lg" /> Timeline
-        </Link>
-      </li>
-      <li>
-        <Link
-          href={"/stats"}
-          className="hover:text-primary transition-all duration-300 active:scale-95"
-        >
-          <TfiStatsUp className="text-lg" /> Stats
-        </Link>
-      </li>
-    </>
-  );
+  const pathname = usePathname();
+
+  const navLinks = [
+    { href: "/", label: "Home", icon: <FaHome className="text-lg" /> },
+    {
+      href: "/timeline",
+      label: "Timeline",
+      icon: <RiTimeLine className="text-lg" />,
+    },
+    {
+      href: "/stats",
+      label: "Stats",
+      icon: <TfiStatsUp className="text-lg" />,
+    },
+  ];
+
+  const links = navLinks.map((link) => (
+    <li key={link.href}>
+      <Link
+        href={link.href}
+        className={`flex items-center gap-1 transition-all duration-300 active:scale-95 ${
+          pathname === link.href
+            ? "text-primary font-bold bg-primary/10 rounded-xl"
+            : "hover:text-primary"
+        }`}
+      >
+        {link.icon} {link.label}
+      </Link>
+    </li>
+  ));
 
   return (
     <div className="navbar justify-between lg:justify-around bg-base-100/70 backdrop-blur-md shadow sticky top-0 z-100 px-4 md:px-10 border-b border-base-200/50 transition-all">
@@ -70,7 +74,7 @@ const Navbar = () => {
         <Link href={"/"} className="hover:opacity-90 transition-opacity">
           <Image
             src={logo}
-            width={180} // Reduced for a more elegant profile
+            width={180}
             height={60}
             alt="logo of keen-keeper"
             className="w-36 md:w-44 h-auto"
