@@ -44,7 +44,7 @@ const TimelinePage = () => {
     filter === "All" ? logs : logs.filter((log) => log.type === filter);
 
   return (
-    <div className="max-w-3xl mx-auto p-8 bg-white min-h-screen">
+    <div className="container mx-auto p-8 bg-white min-h-screen">
       <h1 className="text-3xl font-extrabold text-slate-900 mb-8">Timeline</h1>
 
       <div className="relative mb-8 w-full md:w-72">
