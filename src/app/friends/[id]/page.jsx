@@ -56,7 +56,7 @@ const FriendDetailsPage = async ({ params }) => {
             </div>
 
             <p className="mt-6 text-gray-500 italic text-sm px-2">
-              &quot;{friend.bio}&quot;
+              "{friend.bio}&quot;
             </p>
             <p className="text-[11px] text-gray-400 mt-4">
               Preferred:{" "}
