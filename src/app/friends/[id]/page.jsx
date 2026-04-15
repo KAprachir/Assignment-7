@@ -1,8 +1,8 @@
 import React from "react";
 import Image from "next/image";
 import { RiDeleteBinLine, RiNotificationSnoozeLine } from "react-icons/ri";
-import { FiArchive, FiPhone, FiVideo } from "react-icons/fi";
-import { HiOutlineChatBubbleLeftRight } from "react-icons/hi2";
+import { FiArchive } from "react-icons/fi";
+import ActionBtn from "@/componants/ActionBtn/page";
 
 const FriendDetailsPage = async ({ params }) => {
   const { id } = await params;
@@ -109,20 +109,8 @@ const FriendDetailsPage = async ({ params }) => {
               Edit
             </button>
           </div>
-
-          <div className="bg-white p-8 rounded-3xl shadow-sm border border-gray-100">
-            <h3 className="text-gray-800 font-bold text-lg mb-6">
-              Quick Check-In
-            </h3>
-            <div className="grid grid-cols-3 gap-6">
-              <CheckInButton icon={<FiPhone />} label="Call" />
-              <CheckInButton
-                icon={<HiOutlineChatBubbleLeftRight />}
-                label="Text"
-              />
-              <CheckInButton icon={<FiVideo />} label="Video" />
-            </div>
-          </div>
+          {/* action btn */}
+          <ActionBtn friend={friend} />
         </div>
       </div>
     </div>
@@ -140,17 +128,6 @@ const StatCard = ({ value, label, isDate }) => (
       {label}
     </div>
   </div>
-);
-
-const CheckInButton = ({ icon, label }) => (
-  <button className="flex flex-col items-center justify-center p-8 border border-gray-50 rounded-3xl hover:bg-blue-50 hover:border-blue-100 transition-all group">
-    <div className="text-3xl mb-3 text-gray-700 group-hover:text-blue-600 transition-colors">
-      {icon}
-    </div>
-    <span className="text-sm font-bold text-gray-500 group-hover:text-blue-600">
-      {label}
-    </span>
-  </button>
 );
 
 export default FriendDetailsPage;
