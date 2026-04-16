@@ -1,8 +1,10 @@
 import { use, Suspense } from "react";
 import FriendsCard from "@/componants/FriendsCard/page";
+import path from "path";
+import fs from "fs";
 
 const FriendsList = ({ friendsPromise }) => {
-  const friends = use(friendsPromise);
+  const friends = friendsPromise;
   return (
     <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5 my-5">
       {friends.map((friend) => (
@@ -13,9 +15,9 @@ const FriendsList = ({ friendsPromise }) => {
 };
 
 const Friends = () => {
-  const friendsPromise = fetch("http://localhost:3000/friends.json", {
-    cache: "no-store",
-  }).then((res) => res.json());
+  const filePath = path.join(process.cwd(), "public", "friends.json");
+  const fileData = fs.readFileSync(filePath, "utf-8");
+  const friendsPromise = JSON.parse(fileData);
 
   return (
     <div className="container mx-auto">
