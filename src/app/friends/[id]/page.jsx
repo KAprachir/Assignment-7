@@ -1,3 +1,5 @@
+import fs from "fs";
+import path from "path";
 import React from "react";
 import Image from "next/image";
 import { RiDeleteBinLine, RiNotificationSnoozeLine } from "react-icons/ri";
@@ -7,8 +9,8 @@ import ActionBtn from "@/componants/ActionBtn/page";
 const FriendDetailsPage = async ({ params }) => {
   const { id } = await params;
 
-  const res = await fetch("http://localhost:3000/friends.json");
-  const friends = await res.json();
+  const filePath = path.join(process.cwd(), "public", "friends.json");
+  const friends = JSON.parse(fs.readFileSync(filePath, "utf-8"));
 
   const friend = friends.find((f) => f.id === parseInt(id));
 
