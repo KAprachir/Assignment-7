@@ -6,7 +6,9 @@ import ActionBtn from "@/componants/ActionBtn/page";
 const FriendDetailsPage = async ({ params }) => {
   const { id } = await params;
 
-  const res = await fetch("http://localhost:3000/friends.json");
+  const res = await fetch(
+    "https://keen-keeper-nine-brown.vercel.app/friends.json",
+  );
   const friends = await res.json();
 
   const friend = friends.find((f) => f.id === parseInt(id));
