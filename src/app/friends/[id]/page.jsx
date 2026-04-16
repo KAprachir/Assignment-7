@@ -1,5 +1,3 @@
-import fs from "fs";
-import path from "path";
 import React from "react";
 import Image from "next/image";
 import { RiDeleteBinLine, RiNotificationSnoozeLine } from "react-icons/ri";
@@ -9,15 +7,13 @@ import ActionBtn from "@/componants/ActionBtn/page";
 const FriendDetailsPage = async ({ params }) => {
   const { id } = await params;
 
-  // Safely fetch data
-  const filePath = path.join(process.cwd(), "public", "friends.json");
-  const fileData = fs.readFileSync(filePath, "utf-8");
-  const friends = JSON.parse(fileData);
+  const res = await fetch("http://localhost:3000/friends.json");
+  const friends = await res.json();
+
   const friend = friends.find((f) => f.id === parseInt(id));
 
-  if (!friend) {
+  if (!friend)
     return <div className="p-10 text-center font-bold">Friend not found</div>;
-  }
 
   const formatDate = (dateString) => {
     return new Date(dateString).toLocaleDateString("en-US", {
@@ -30,7 +26,6 @@ const FriendDetailsPage = async ({ params }) => {
   return (
     <div className="max-w-6xl mx-auto p-6 bg-gray-50 min-h-screen font-sans">
       <div className="grid grid-cols-12 gap-6">
-        {/* Left Sidebar */}
         <div className="col-span-12 md:col-span-4 space-y-4">
           <div className="bg-white p-8 rounded-3xl shadow-sm text-center border border-gray-100">
             <div className="relative w-24 h-24 mx-auto mb-4 border-4 border-white shadow-sm rounded-full overflow-hidden">
@@ -56,14 +51,13 @@ const FriendDetailsPage = async ({ params }) => {
                 {friend.status}
               </span>
               <span className="px-4 py-1 bg-green-50 text-green-600 rounded-full text-[10px] font-bold uppercase border border-green-100">
-                {friend.tags?.[0]}
+                {friend.tags[0]}
               </span>
             </div>
 
             <p className="mt-6 text-gray-500 italic text-sm px-2">
-              "{friend.bio}"
+              "{friend.bio}&quot;
             </p>
-
             <p className="text-[11px] text-gray-400 mt-4">
               Preferred:{" "}
               <span className="text-gray-500">
@@ -72,7 +66,6 @@ const FriendDetailsPage = async ({ params }) => {
             </p>
           </div>
 
-          {/* Quick Actions */}
           <div className="space-y-3">
             <button className="w-full py-3 bg-white border border-gray-100 rounded-2xl text-sm font-semibold text-gray-700 flex items-center justify-center gap-3 hover:bg-gray-50 transition-all">
               <RiNotificationSnoozeLine className="text-lg" /> Snooze 2 Weeks
@@ -86,7 +79,6 @@ const FriendDetailsPage = async ({ params }) => {
           </div>
         </div>
 
-        {/* Main Content */}
         <div className="col-span-12 md:col-span-8 space-y-6">
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
             <StatCard
@@ -97,7 +89,7 @@ const FriendDetailsPage = async ({ params }) => {
             <StatCard
               value={formatDate(friend.next_due_date)}
               label="Next Due"
-              isDate={true}
+              isDate
             />
           </div>
 
@@ -117,7 +109,7 @@ const FriendDetailsPage = async ({ params }) => {
               Edit
             </button>
           </div>
-
+          {/* action btn */}
           <ActionBtn friend={friend} />
         </div>
       </div>
