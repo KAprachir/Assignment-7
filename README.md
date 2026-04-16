@@ -1,36 +1,98 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🤝 Keen Keeper
 
-## Getting Started
+> **Your personal shelf of meaningful connections.**  
+> Keen Keeper helps you stay intentional about the friendships that matter most — track when you last reached out, set contact goals, and log every interaction in one clean dashboard.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## 🚀 Live Demo
+
+🔗 [keen-keeper.vercel.app](https://keen-keeper.vercel.app) <!-- Replace with your actual link -->
+
+---
+
+## 🛠️ Technologies Used
+
+| Technology          | Purpose                     |
+| ------------------- | --------------------------- |
+| **Next.js 15**      | Framework & App Router      |
+| **React 19**        | UI Components               |
+| **Tailwind CSS**    | Styling & Responsive Design |
+| **DaisyUI**         | Component Library           |
+| **Recharts**        | Friendship Analytics Chart  |
+| **React Hot Toast** | Toast Notifications         |
+| **React Icons**     | Icons throughout the UI     |
+| **localStorage**    | Persisting interaction logs |
+
+---
+
+## ✨ Key Features
+
+### 1. 📋 Friend Tracking Dashboard
+
+View all your friends at a glance with status-colored cards showing days since last contact, tags, and relationship health. Friends are marked as **On Track**, **Almost Due**, or **Overdue** so you always know who needs attention.
+
+### 2. ⚡ One-Click Check-In Logging
+
+From any friend's detail page, log a **Call**, **Text**, or **Video** interaction in one click. Each check-in is instantly saved and shows up on the Timeline — with a toast notification confirming the log.
+
+### 3. 📜 Filterable Interaction Timeline
+
+The Timeline page shows your full history of interactions sorted by most recent. Filter by interaction type (Call, Text, Video) to quickly find what you're looking for.
+
+---
+
+## 📁 Project Structure
+
+```
+keen-keeper/
+├── app/
+│   ├── page.js               # Home page
+│   ├── friends/[id]/         # Friend detail page
+│   ├── timeline/             # Timeline page
+│   ├── stats/                # Analytics page
+│   └── not-found.jsx         # 404 page
+├── components/
+│   ├── shared/Navbar/        # Navbar with active link highlight
+│   ├── Hero/                 # Banner + stats bar
+│   ├── FriendsCard/          # Friend card component
+│   ├── ActionBtn/            # Check-in buttons
+│   ├── StatsBar/             # Summary stat cards
+│   └── Footer/               # Footer
+└── public/
+    └── friends.json          # Friend data
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## 📦 Getting Started
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+# Clone the repository
+git clone https://github.com/KAprachir/keen-keeper.git
 
-## Learn More
+# Navigate into the project
+cd keen-keeper
 
-To learn more about Next.js, take a look at the following resources:
+# Install dependencies
+npm install
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+# Run the development server
+npm run dev
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 👨‍💻 Author
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+**Prachir**  
+MIS Student | Frontend Developer  
+🔗 [GitHub](https://github.com/KAprachir) · [LinkedIn](https://linkedin.com/in/your-profile)
+
+---
+
+## 📄 License
+
+This project was built as an academic assignment. Feel free to use it as a reference.

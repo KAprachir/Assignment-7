@@ -2,6 +2,8 @@
 import React from "react";
 import { FiPhone, FiVideo } from "react-icons/fi";
 import { HiOutlineChatBubbleLeftRight } from "react-icons/hi2";
+import toast from "react-hot-toast";
+
 const ActionBtn = ({ friend }) => {
   return (
     <div className="bg-white p-8 rounded-3xl shadow-sm border border-gray-100">
@@ -26,11 +28,12 @@ const CheckInButton = ({ icon, label, friend }) => {
       type: label,
       date: new Date().toISOString(),
     };
-
     const existing = JSON.parse(localStorage.getItem("checkin_logs") || "[]");
     existing.push(newLog);
     localStorage.setItem("checkin_logs", JSON.stringify(existing));
+    toast.success(`${label} with ${friend.name} logged!`);
   };
+
   return (
     <button
       onClick={() => handleClick(friend)}
@@ -45,4 +48,5 @@ const CheckInButton = ({ icon, label, friend }) => {
     </button>
   );
 };
+
 export default ActionBtn;
