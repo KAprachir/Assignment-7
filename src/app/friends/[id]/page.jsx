@@ -1,4 +1,3 @@
-import React from "react";
 import Image from "next/image";
 import { RiDeleteBinLine, RiNotificationSnoozeLine } from "react-icons/ri";
 import { FiArchive } from "react-icons/fi";
