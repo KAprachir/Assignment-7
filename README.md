@@ -7,7 +7,7 @@
 
 ## 🚀 Live Demo
 
-🔗 [keen-keeper.vercel.app](https://keen-keeper.vercel.app) <!-- Replace with your actual link -->
+🔗 [keen-keeper.vercel.app](https://keen-keeper-nine-brown.vercel.app/) <!-- Replace with your actual link -->
 
 ---
 
@@ -62,28 +62,6 @@ keen-keeper/
 └── public/
     └── friends.json          # Friend data
 ```
-
----
-
-## 📦 Getting Started
-
-```bash
-# Clone the repository
-git clone https://github.com/KAprachir/keen-keeper.git
-
-# Navigate into the project
-cd keen-keeper
-
-# Install dependencies
-npm install
-
-# Run the development server
-npm run dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) in your browser.
-
----
 
 ## 👨‍💻 Author
 
