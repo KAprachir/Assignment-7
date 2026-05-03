@@ -1,44 +1,45 @@
 # 🤝 Keen Keeper
 
 > **Your personal shelf of meaningful connections.**  
-> Keen Keeper helps you stay intentional about the friendships that matter most — track when you last reached out, set contact goals, and log every interaction in one clean dashboard.
+> Keen Keeper helps you stay intentional about the friendships that matter most — track when you last reached out, set contact goals, and log every interaction in one clean, premium dashboard.
 
 ---
 
 ## 🚀 Live Demo
 
-🔗 [keen-keeper.vercel.app](https://keen-keeper-nine-brown.vercel.app/) <!-- Replace with your actual link -->
+🔗 [keen-keeper.vercel.app](https://keen-keeper-nine-brown.vercel.app/)
 
 ---
 
 ## 🛠️ Technologies Used
 
-| Technology          | Purpose                     |
-| ------------------- | --------------------------- |
-| **Next.js 15**      | Framework & App Router      |
-| **React 19**        | UI Components               |
-| **Tailwind CSS**    | Styling & Responsive Design |
-| **DaisyUI**         | Component Library           |
-| **Recharts**        | Friendship Analytics Chart  |
-| **React Hot Toast** | Toast Notifications         |
-| **React Icons**     | Icons throughout the UI     |
-| **localStorage**    | Persisting interaction logs |
+| Technology          | Purpose                                   |
+| ------------------- | ----------------------------------------- |
+| **Next.js 16**      | Framework (App Router & Turbopack)        |
+| **React 19**        | Modern UI Components (Hooks & use hook)   |
+| **Framer Motion**   | Premium Scroll & Layout Animations        |
+| **Tailwind CSS 4**  | Advanced Styling & Design System          |
+| **DaisyUI 5**       | Modern Component Library                  |
+| **Recharts**        | Friendship Analytics Visualization        |
+| **React Hot Toast** | Premium Toast Notifications               |
+| **React Icons**     | Rich Iconography                          |
+| **localStorage**    | Client-side Persistence                   |
 
 ---
 
 ## ✨ Key Features
 
-### 1. 📋 Friend Tracking Dashboard
+### 1. 📋 Premium Dashboard
+Experience a state-of-the-art interface with **smooth scroll reveals**, **staggered animations**, and a **glassmorphism** design system. Friends are intuitively color-coded based on relationship health: **On Track**, **Almost Due**, or **Overdue**.
 
-View all your friends at a glance with status-colored cards showing days since last contact, tags, and relationship health. Friends are marked as **On Track**, **Almost Due**, or **Overdue** so you always know who needs attention.
+### 2. ⚡ Intelligent Check-In Logging
+Log interactions with a single click. Integrated with `framer-motion` for a tactile feel, logging a **Call**, **Text**, or **Video** check-in is instantly reflected across the app with premium toast feedback.
 
-### 2. ⚡ One-Click Check-In Logging
+### 3. 📊 Friendship Analytics
+Visualize your social health through interactive charts. Track your interaction distribution and ensure you're meeting your relationship goals with the built-in analytics dashboard.
 
-From any friend's detail page, log a **Call**, **Text**, or **Video** interaction in one click. Each check-in is instantly saved and shows up on the Timeline — with a toast notification confirming the log.
-
-### 3. 📜 Filterable Interaction Timeline
-
-The Timeline page shows your full history of interactions sorted by most recent. Filter by interaction type (Call, Text, Video) to quickly find what you're looking for.
+### 4. 📜 Interaction Timeline
+A filterable, chronological history of your connections. Easily track back through your shared moments with meaningful icons and clear timestamps.
 
 ---
 
@@ -46,22 +47,23 @@ The Timeline page shows your full history of interactions sorted by most recent.
 
 ```
 keen-keeper/
-├── app/
-│   ├── page.js               # Home page
-│   ├── friends/[id]/         # Friend detail page
-│   ├── timeline/             # Timeline page
-│   ├── stats/                # Analytics page
-│   └── not-found.jsx         # 404 page
-├── components/
-│   ├── shared/Navbar/        # Navbar with active link highlight
-│   ├── Hero/                 # Banner + stats bar
-│   ├── FriendsCard/          # Friend card component
-│   ├── ActionBtn/            # Check-in buttons
-│   ├── StatsBar/             # Summary stat cards
-│   └── Footer/               # Footer
+├── src/
+│   ├── app/                  # Next.js App Router
+│   │   ├── friends/          # Friend listing & details
+│   │   ├── stats/            # Analytics dashboard
+│   │   ├── timeline/         # Interaction history
+│   │   └── globals.css       # Premium Design System
+│   └── components/           # Atomic UI Components
+│       ├── ActionBtn/        # Tactile check-in buttons
+│       ├── FriendsCard/      # Animated friend preview
+│       ├── Hero/             # Dynamic header section
+│       ├── StatsBar/         # Animated counter cards
+│       └── shared/           # Navbar & global UI
 └── public/
-    └── friends.json          # Friend data
+    └── friends.json          # Mock database
 ```
+
+---
 
 ## 👨‍💻 Author
 

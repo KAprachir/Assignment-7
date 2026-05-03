@@ -1,14 +1,32 @@
+"use client";
 import { use, Suspense } from "react";
-import FriendsCard from "@/componants/FriendsCard/page";
+import FriendsCard from "@/components/FriendsCard/FriendsCard";
+import { motion } from "framer-motion";
 
 const FriendsList = ({ friendsPromise }) => {
   const friends = use(friendsPromise);
+  
+  const container = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.05,
+      },
+    },
+  };
+
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5 my-5">
+    <motion.div 
+      variants={container}
+      initial="hidden"
+      animate="show"
+      className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 my-8 px-4"
+    >
       {friends.map((friend) => (
         <FriendsCard key={friend.id} friend={friend} />
       ))}
-    </div>
+    </motion.div>
   );
 };
 
@@ -21,12 +39,17 @@ const Friends = () => {
   ).then((res) => res.json());
 
   return (
-    <div className="container mx-auto">
-      <h2 className="text-2xl font-semibold p-2">Your Friends</h2>
+    <div className="container mx-auto mt-12">
+      <div className="px-4 mb-8">
+        <h2 className="text-3xl font-black text-neutral tracking-tight">Your Friends</h2>
+        <p className="text-neutral/50 font-medium mt-1">Keep track of your meaningful connections</p>
+      </div>
       <Suspense
         fallback={
-          <div className="flex justify-center items-center py-20">
-            <span className="loading loading-spinner loading-lg text-primary"></span>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 px-4 py-10">
+            {[...Array(8)].map((_, i) => (
+              <div key={i} className="h-64 bg-white rounded-3xl animate-pulse border border-slate-100" />
+            ))}
           </div>
         }
       >
@@ -37,3 +60,4 @@ const Friends = () => {
 };
 
 export default Friends;
+
